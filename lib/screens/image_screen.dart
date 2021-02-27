@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_blurhash/flutter_blurhash.dart';
 
 class ImageScreen extends StatelessWidget {
   final String imageUrl;
-  final String blurHash;
-  ImageScreen({this.imageUrl, this.blurHash});
+  ImageScreen({this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +12,7 @@ class ImageScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.black,
       body: Center(
-        child: BlurHash(
-          duration: Duration(milliseconds: 100),
-          hash: blurHash,
-          image: imageUrl,
-          imageFit: BoxFit.fitWidth,
-        ),
+        child: Image.network(imageUrl),
       ),
     );
   }

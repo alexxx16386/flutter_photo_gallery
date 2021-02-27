@@ -101,7 +101,6 @@ class _HomePageState extends State<HomePage> {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => ImageScreen(
                               imageUrl: listImage[index].urlFull,
-                              blurHash: listImage[index].blurHash,
                             )));
                   },
                   child: ClipRRect(
